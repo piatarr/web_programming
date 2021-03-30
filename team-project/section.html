@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+    <title> </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+        }
+        #Box{
+            background-image: url("./src/img/background.png");
+            width: 100%;
+            object-fit: cover;
+            background-size: cover;
+            min-height: 100%;
+        }
+        #title h1{         
+            float: left;  
+            color: whitesmoke; 
+            margin-top: 0;
+            font-size: 80px;
+            font-weight: bold;
+            font-family: 'Eulyoo1945-SemiBold';
+        }
+        #title a{
+            text-decoration: none;
+            float : right;
+            font-size: 20px;
+            color: whitesmoke;
+        }
+        #title a:hover{
+            transform: scale(1.5);
+        }
+        #container{
+            width: 85%;
+            margin: 0 auto;
+            padding : 80px 60px;
+        }        
+        #sections{
+            float: left;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        #section{
+            color: whitesmoke; 
+            height: 400px;
+            width: 33%;
+            word-break: break-all;
+            margin: 0 10px 0 0;
+            padding : 0 20px 0 20px;
+            border-right: 1px solid rgba(151,151,151,0.3);
+        }
+        #section p{
+            font-family: 'Eulyoo1945-Regular';
+            font-size: 16px;
+            line-height: 30px;
+            height: 200px;
+        }
+        .iconbtn{
+            color: whitesmoke;
+            border : 1px solid whitesmoke;
+            border-radius: 50%;
+            float: right;
+            width : 30px;
+            height: 30px;
+            text-decoration: none;
+            margin: 10px;
+            position: relative;
+            font-size: 16px;
+        }
+        .iconbtn::before{
+            position: absolute;
+            z-index:1;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .iconbtn::after{
+            content : '';
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: 50%;
+            z-index: 0;
+            
+        }
+        .iconbtn:hover{
+            background: whitesmoke;
+            color: #34495e;
+        }
+        
+        .iconbtn:hover::after{
+            background: whitesmoke;
+            transition: 0.4s;  
+            transform: scale(1.4);
+            opacity: 0;
+        }
+        @keyframes showText{
+            from {
+                transform: translateX(20px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        .stagger-item{
+            animation: showText 2s;
+            animation-fill-mode: both;
+        }            
+        .stagger-item:nth-child(1){
+            animation-delay: 0.4;
+        }
+        .stagger-item:nth-child(2){
+            animation-delay: 0.5;
+        }
+        .stagger-item:nth-child(3){
+            animation-delay: 0.6;
+        }
+        .stagger-item:nth-child(4){
+            animation-delay: 0.8;
+        }
+        .stagger-item:nth-child(5){
+            animation-delay: 1.0;
+        }
+        .icontext:hover{
+            cursor: pointer;
+        }
+        /*을유 semi-bold*/
+        @font-face {
+            font-family: 'Eulyoo1945-SemiBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-SemiBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*을유 regular*/
+        @font-face {
+            font-family: 'Eulyoo1945-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+  </head>
+  <body>
+      <div id = "Box">
+        <div id="container">
+            <div id="title" class="stagger-item">
+                <h1>NOX</h2>
+                <a href="./index.html">X</a>
+            </div>
+            <div id="sections">
+                <div id="section" class="stagger-item">
+                    <h2 id="subtitle">Sleeping</h2>
+                    <p class="stagger-item">'수면은 침묵의 동반자이다. <br/>
+                        문제가 있으면 내일 생각하라.' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -그라시안' <br/>
+                        당장 해결되지 않는 고민을 끌어 안고 있기보단 <br/>
+                        달콤한 잠과 함께 스트레스를 떨쳐보세요. <br/>
+                        한결 편안하게 문제 해결의 실마리를 찾을 수 있을 것 <br/>
+                        입니다.</p>
+                    <a href="#" class="iconbtn fas fa-chevron-right"></a>
+                    <a href="./selfcheck.html" class="iconbtn fas fa-user-check"></a>
+                    <p class="icontext" style="float:right" onclick="location.href='./selfcheck.html'">Self Check</p>
+                </div>
+                <div id="section" class="stagger-item">
+                    <h2 id="subtitle" >Book</h2>
+                    <p class="stagger-item">불면증의 겉모습 보다는 불면증을 겪는 한 인간의 <br/> 
+                    마음의 중심을 제대로 돌보아야 합니다. <br/>
+                    잠자기 위한 구체적인 요령뿐만 아니라 불면증 밑에 <br/>
+                    숨겨진 불안이나 자질구레한 고민까지 다루는 <br/>
+                    책을 소개합니다.</p>
+                    <a href="#" class="iconbtn fas fa-chevron-right"></a>
+
+                </div>
+                <div id="section"class="stagger-item"style="border-right: 0px;">
+                    <h2 id="subtitle" >Scent</h2>
+                    <p class="stagger-item">좋은 향기는 스트레스를 완화시키는데 도움이 됩니다.</p>
+                    <a href="#" class="iconbtn fas fa-chevron-right"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
